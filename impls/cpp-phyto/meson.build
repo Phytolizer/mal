@@ -11,7 +11,10 @@ project(
     ],
 )
 
+readline_dep = dependency('readline')
+
 executable(
     'step0_repl',
     'step0_repl.cpp',
+    dependencies : [readline_dep],
 )

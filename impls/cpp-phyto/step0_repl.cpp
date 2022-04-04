@@ -1,11 +1,13 @@
+#include "readline.hpp"
+
 #include <iostream>
 #include <string>
 
 int main() {
     std::string line_buffer;
+    read_line rl;
     while (true) {
-        std::cout << "mal> " << std::flush;
-        if (!std::getline(std::cin, line_buffer)) {
+        if (!rl.read(line_buffer)) {
             break;
         }
 
